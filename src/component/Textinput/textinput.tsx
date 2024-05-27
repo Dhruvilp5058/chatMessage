@@ -1,7 +1,6 @@
-import React from 'react'
-import { StyleSheet, TextInput } from 'react-native'
-import { horizontalScale, verticalScale } from '../../Metrics'
-
+import React from 'react';
+import { StyleSheet, TextInput } from 'react-native';
+import { horizontalScale, verticalScale } from '../../Metrics';
 const TextinputSignup = ({placeholder,onChangeText,value,props}) => {
     return (
         <>
@@ -10,7 +9,7 @@ const TextinputSignup = ({placeholder,onChangeText,value,props}) => {
                 style={style.txtinput}
                 placeholder={placeholder}
                 onChangeText={onChangeText}
-                placeholderTextColor={'black'}
+                placeholderTextColor={'black'} 
                 {...props}
             />
         </>

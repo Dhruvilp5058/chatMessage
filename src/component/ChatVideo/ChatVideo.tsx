@@ -8,12 +8,12 @@ import { useNavigation } from '@react-navigation/native';
 
 const ChatVideo = ({ props }) => {
   const videoRef = useRef(null);
-  const [paused, setPaused] = useState(true);  
+  const [paused, setPaused] = useState(true);
   const [loading, setLoading] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const navigation = useNavigation()
-  
+
   const togglePlayPause = () => {
     setPaused(!paused);
   };
@@ -39,39 +39,39 @@ const ChatVideo = ({ props }) => {
   };
 
   return (
-    <Pressable onPress={()=>navigation.navigate('video',{videoUri: props.currentMessage.video})}>
     <View style={styles.container}>
-      <View style={styles.videoContainer}>
-        <Video
-          source={{ uri: props.currentMessage.video }}
-          ref={videoRef}
-          paused={paused}
-          onBuffer={onBuffer}
-          onError={videoError}
-          style={styles.video}
-          onLoad={() => setLoading(false)}
-          onProgress={onProgress}  
-        />
-        <View style={styles.timer}>
-          <Text style={styles.texttime}>{currentTime.toFixed(0)} / {duration.toFixed(0)}</Text>
-        </View>
-      </View>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={togglePlayPause}>
-          <Ionicons name={paused ? 'play-circle-outline' : 'stop-circle-outline'} size={33} color={'#ffffff'} />
-        </TouchableOpacity>
-        {loading ? (
-          <View style={styles.button}>
-            <ActivityIndicator size="large" color="#ffffff" />
+      <Pressable onPress={() => navigation.navigate('video', { videoUri: props.currentMessage.video })}>
+        <View style={styles.videoContainer}>
+          <Video
+            source={{ uri: props.currentMessage.video }}
+            ref={videoRef}
+            paused={paused}
+            onBuffer={onBuffer}
+            onError={videoError}
+            style={styles.video}
+            onLoad={() => setLoading(false)}
+            onProgress={onProgress}
+          />
+          <View style={styles.timer}>
+            <Text style={styles.texttime}>{currentTime.toFixed(0)} / {duration.toFixed(0)}</Text>
           </View>
-        ) : (
-          <TouchableOpacity style={styles.button} onPress={resetVideo}>
-            <MaterialCommunityIcons name={'restart'} size={33} color={'#ffffff'} />
+        </View>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button} onPress={togglePlayPause}>
+            <Ionicons name={paused ? 'play-circle-outline' : 'stop-circle-outline'} size={33} color={'#ffffff'} />
           </TouchableOpacity>
-        )}
-      </View>
+          {loading ? (
+            <View style={styles.button}>
+              <ActivityIndicator size="large" color="#ffffff" />
+            </View>
+          ) : (
+            <TouchableOpacity style={styles.button} onPress={resetVideo}>
+              <MaterialCommunityIcons name={'restart'} size={33} color={'#ffffff'} />
+            </TouchableOpacity>
+          )}
+        </View>
+      </Pressable>
     </View>
-    </Pressable>
   );
 };
 
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignSelf: 'center',
   },
   button: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',

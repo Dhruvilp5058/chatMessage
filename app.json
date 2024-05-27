@@ -1,4 +1,7 @@
 {
   "name": "AwesomeProject",
-  "displayName": "AwesomeProject"
+  "displayName": "AwesomeProject",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-3175738465017051~6044597118"
+  }
 }

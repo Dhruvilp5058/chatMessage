@@ -2,7 +2,7 @@ import firestore from '@react-native-firebase/firestore';
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { Alert, BackHandler, Text, TouchableOpacity, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import TextinputSignup from '../../component/Textinput/textinput';
 import { loginAutharrey } from '../../Redux/Slice/slice';
 import { style } from './style';

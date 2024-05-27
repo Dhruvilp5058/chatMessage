@@ -3,9 +3,9 @@ import { TouchableOpacity } from 'react-native';
 import Sound from 'react-native-sound';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const ChatAudio = ({ props }) => {
+const ChatAudio = ({ props,closeModal }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [sound, setSound] = useState(null); 
+  const [sound, setSound] = useState(null);  
   useEffect(() => {
     return () => {
       if (sound) {
@@ -36,6 +36,7 @@ const ChatAudio = ({ props }) => {
           });
         });
         setSound(newSound);
+        closeModal()
       }
     } catch (error) {
       console.error('Error handling audio playback:', error);
