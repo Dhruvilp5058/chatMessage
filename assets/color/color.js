@@ -1,4 +1,5 @@
 export const colour = {
     primary:'#AD93FA',
-    white:'white'
+    white:'white',
+    loader:'black'
 }

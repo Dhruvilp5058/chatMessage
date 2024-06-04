@@ -8,6 +8,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 import { profileavatar } from '../../Redux/Slice/slice'
+
+
 const HomeScreen = () => {
   const navigation = useNavigation()
   const [user, setUser] = useState([])
@@ -28,7 +30,7 @@ const HomeScreen = () => {
         ]);
         return true;
       }
-      return false; // Allow normal back navigation for other screens
+      return false;  
     };
 
     const backHandler = BackHandler.addEventListener(
@@ -50,21 +52,11 @@ const HomeScreen = () => {
       console.log('permission denied');
     }
   }
-  const requestPermissions = async () => {
-    const recordPermission = await request(PermissionsAndroid.PERMISSIONS.RECORD_AUDIO);
-    const writeExternalPermission = await request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
-    const readExternalPermission = await request(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE);
   
-    if (recordPermission === 'granted' && writeExternalPermission === 'granted' && readExternalPermission === 'granted') {
-      console.log('All permissions granted');
-    } else {
-      console.log('Some permissions denied');
-    }
-  };
   
   useEffect(() => {
      recordpermission()
-    setTimeout(() => {
+    setTimeout(() => { 
       setLoading(false)
     }, 1000);
     getUsers()
@@ -91,6 +83,7 @@ const HomeScreen = () => {
 
   return (
     <View style={style.main}>
+     
       <View style={style.headerview}>
         <Text style={style.txtheader}>home</Text>
         <Menu>

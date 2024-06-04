@@ -14,25 +14,28 @@ const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 const App = () => {
+
   return (
     <MenuProvider>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor} >
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName='splash' screenOptions={{ headerShown: false }}>
-            <Stack.Screen component={Screens.SplashScreen} name='splash' />
-            <Stack.Screen component={Screens.Signup} name='signup' />
-            <Stack.Screen component={Screens.LoginScreen} name='login' />
-            <Stack.Screen component={TabNavigator} name='hometab' />
-            <Stack.Screen component={Screens.ChatScreen} name='chatscreen' />
-            <Stack.Screen component={Screens.Profile} name='profile' /> 
-            <Stack.Screen component={Screens.VideoScreen} name='video' /> 
-            <Stack.Screen component={Screens.ProfileDetail} name='profileDetail' /> 
-            <Stack.Screen component={Screens.ImageView} name='imageview' /> 
-          </Stack.Navigator>
-        </NavigationContainer>
-      </PersistGate>
-    </Provider>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor} >
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName='splash' screenOptions={{ headerShown: false, animation: 'fade_from_bottom' }}>
+              <Stack.Screen component={Screens.SplashScreen} name='splash' />
+              <Stack.Screen component={Screens.Signup} name='signup' />
+              <Stack.Screen component={Screens.LoginScreen} name='login' />
+              <Stack.Screen component={TabNavigator} name='hometab' />
+              <Stack.Screen component={Screens.ChatScreen} name='chatscreen' />
+              <Stack.Screen component={Screens.Profile} name='profile' />
+              <Stack.Screen component={Screens.VideoScreen} name='video' />
+              <Stack.Screen component={Screens.ProfileDetail} name='profileDetail' />
+              <Stack.Screen component={Screens.ImageView} name='imageview' />
+              <Stack.Screen component={Screens.Pdfview} name='pdf' />
+              <Stack.Screen component={Screens.Videocall} name='videocall' />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </PersistGate>
+      </Provider>
     </MenuProvider>
   )
 }
@@ -68,7 +71,7 @@ const TabNavigator = () => {
             <Ionicons name="settings" color={color} size={26} />
           ),
         }} />
-        <Tab.Screen component={Screens.Learning} name='learn'
+      <Tab.Screen component={Screens.Learning} name='learn'
         options={{
           tabBarLabel: 'learning',
           tabBarActiveTintColor: 'white',

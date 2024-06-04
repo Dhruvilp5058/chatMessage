@@ -2,12 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: [],
-  signup:[],
-  profile:{}
+  signup: [],
+  profile: {},
+  pdf: {},
 
 };
-export const counterSlice = createSlice({ 
-  name: 'counter', 
+export const counterSlice = createSlice({
+  name: 'counter',
   initialState,
   reducers: {
 
@@ -15,19 +16,23 @@ export const counterSlice = createSlice({
       state.signup = action.payload
     },
     loginAutharrey: (state, action) => {
-      state.value =  action.payload
+      state.value = action.payload
     },
-    profileavatar:(state,action)=>{
-      state.profile=action.payload
+    profileavatar: (state, action) => {
+      state.profile = action.payload
+    },
+    pdfview: (state, action) => {
+      state.pdf = action.payload
     }
 
 
   },
 });
-export const { 
-  signupauth, 
+export const {
+  signupauth,
   loginAutharrey,
-  profileavatar
+  profileavatar,
+  pdfview
 
 } = counterSlice.actions;
 
