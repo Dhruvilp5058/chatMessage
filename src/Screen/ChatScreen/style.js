@@ -39,7 +39,7 @@ export const style = StyleSheet.create({
         backgroundColor: 'white',
     },
     txtheader: {
-        fontSize: moderateScale(25),
+        fontSize: moderateScale(20),
         color: colour.white,
         fontWeight: '500',
         marginLeft: horizontalScale(10)
@@ -67,14 +67,21 @@ export const style = StyleSheet.create({
     audiobtn: {
         marginRight: horizontalScale(2)
     },
+    videocallbtn:{
+        right:verticalScale(40),
+    },
     threedotbtn: {
         backgroundColor: colour.primary,
-        bottom: verticalScale(40),
-        marginRight: horizontalScale(10)
+        position:'absolute',
+        right:horizontalScale(-5),
+        bottom:verticalScale(16), 
     },
-    popupstyle: {
-        top: verticalScale(42),
-        borderRadius: moderateScale(20),
+    popupstyle: {  
+        borderRadius: moderateScale(20), 
+        marginRight:horizontalScale(60), 
+        position:'absolute',
+        top:verticalScale(30),
+        left:verticalScale(-10)
     },
     refres: {
         fontSize: moderateScale(20),

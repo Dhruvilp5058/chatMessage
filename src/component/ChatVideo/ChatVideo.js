@@ -77,18 +77,15 @@ const ChatVideo = ({ props }) => {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
+    width:horizontalScale(200)
   },
-  videoContainer: {
-    position: 'relative',
-    marginBottom: verticalScale(20),
-  },
+ 
   video: {
     height: verticalScale(270),
-    width: horizontalScale(290),
+    width:'100%',
     borderRadius: moderateScale(20),
+    resizeMode:'cover',
+    alignSelf:'center'
   },
   buttonContainer: {
     flexDirection: 'row',

@@ -20,7 +20,7 @@ const App = () => {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor} >
           <NavigationContainer>
-            <Stack.Navigator initialRouteName='splash' screenOptions={{ headerShown: false }}>
+            <Stack.Navigator initialRouteName='splash' screenOptions={{ headerShown: false, animation: 'fade_from_bottom' }}>
               <Stack.Screen component={Screens.SplashScreen} name='splash' />
               <Stack.Screen component={Screens.Signup} name='signup' />
               <Stack.Screen component={Screens.LoginScreen} name='login' />

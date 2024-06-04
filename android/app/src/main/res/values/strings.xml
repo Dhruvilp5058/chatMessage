@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Chat Messege App</string>
+    <string name="app_name">Chat Messege App</string>here
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">"AIzaSyCq0AElvWIZUJ5m7G-k8NVFLETyUn7kzco</string>
 </resources>

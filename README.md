@@ -1,79 +1,26 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Chat Messaging App
+This React Native application is a real-time chat messaging app that allows users to sign up, log in, and engage in live chat conversations. It integrates with Firebase Firestore for data storage and real-time communication. Additionally, users can send text messages, documents, images, videos, and initiate video calls with other users.
 
-# Getting Started
+# Features
+* User Authentication: Users can sign up and log in securely to access the chat features.
+* Real-time Messaging: Utilizes Firebase Firestore to enable real-time messaging between users.
+* Message Types: Supports various types of messages including text, documents, images, and videos.
+* Video Calling: Allows users to initiate video calls with other users within the app.
+* Redux Integration: Utilizes Redux for state management, providing a predictable state container for the application.
+* Technologies Used
+* React Native
+* Firebase Firestore
+* Redux
+* React Navigation
+ 
+# Usage
+* Sign up for an account using the provided registration form.
+* Log in to access the chat messaging features.
+* Start a new conversation or join existing ones to chat with other users.
+* Send text messages, documents, images, or videos by selecting the appropriate options in the chat interface.
+* Initiate video calls with other users by selecting the video call option in the chat interface.
+* Contributing
+* Contributions are welcome! Feel free to open issues or pull requests to suggest improvements, report bugs, or add new features.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+ <img src="./screenshort/img1.jpg" width="200" height="350"/>  <img src="./screenshort/img2.jpg" width="200" height="350"/>  <img src="./screenshort/img3.jpg" width="200" height="350"/> 
+  <img src="./screenshort/img4.jpg" width="200" height="350"/>  <img src="./screenshort/img5.jpg" width="200" height="350"/>  <img src="./screenshort/img6.jpg" width="200" height="350"/> 

@@ -43,11 +43,9 @@ const LoginScreen = () => {
       .where('email', '==', email)
       .get()
       .then(querySnapshot => {
-        if (querySnapshot.empty) {
-          // Email does not exist
+        if (querySnapshot.empty) { 
           seterror('Email not found. Please sign up.');
-        } else {
-          // Email exists
+        } else { 
           const userData = querySnapshot.docs[0].data();
           const { name, email, userID } = userData;
           reduxStore(name, email, userID);

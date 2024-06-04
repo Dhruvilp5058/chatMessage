@@ -30,7 +30,7 @@ const HomeScreen = () => {
         ]);
         return true;
       }
-      return false; // Allow normal back navigation for other screens
+      return false;  
     };
 
     const backHandler = BackHandler.addEventListener(

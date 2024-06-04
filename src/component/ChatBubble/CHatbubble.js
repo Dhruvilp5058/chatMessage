@@ -67,6 +67,9 @@ const ChatBubble = ({ props, deleteMessage }) => {
         <Bubble
             {...props}
             wrapperStyle={{
+                left:{
+                    backgroundColor:'lightgrey'
+                },
                 right: {
                     backgroundColor: colour.primary,
                 },
